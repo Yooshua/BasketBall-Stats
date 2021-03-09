@@ -1,8 +1,5 @@
-
-
 if __name__ == "__main__":
-    print('whoops!')
-    
+    pass
 
 def clean_data(list_players):
     """Clean up the player data to the format we want"""
@@ -36,7 +33,7 @@ def clean_data(list_players):
         'guardians': guardian,
         'height': clean_height,
         'experience': experience})
-
+        
     return clean_player_list
             
 
@@ -94,7 +91,7 @@ def display_team_stats(team_name, team_roster):
             player_guardians.append(player.get('guardians')[1])
         else:
             player_guardians.append(player.get('guardians'))
-        if player['experience'] == 'YES':
+        if player['experience'] == True:
             players_with_xp.append(player.get('name'))
         else:
             players_no_xp.append(player.get('name'))
